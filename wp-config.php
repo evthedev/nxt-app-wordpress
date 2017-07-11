@@ -27,6 +27,8 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') { // local dev settings
 	define('DB_USER', 'root');
 	/** MySQL database password */
 	define('DB_PASSWORD', 'root');
+	/** MySQL hostname */
+	define('DB_HOST', 'localhost');
 } 
 
 else { // Heroku settings
@@ -36,10 +38,9 @@ else { // Heroku settings
 	define('DB_USER', 'b0238d81f7ca64');
 	/** MySQL database password */
 	define('DB_PASSWORD', '13562ee5');
+	/** MySQL hostname */
+	define('DB_HOST', 'eu-cdbr-west-01.cleardb.com');
 }
-
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
