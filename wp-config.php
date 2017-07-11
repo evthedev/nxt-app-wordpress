@@ -19,14 +19,24 @@
  */
 
 // ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'nxt-app-2');
 
-/** MySQL database username */
-define('DB_USER', 'root');
+if ($_SERVER['SERVER_NAME'] == 'localhost') { // local dev settings
+	/** The name of the database for WordPress */
+	define('DB_NAME', 'nxt-app-2');
+	/** MySQL database username */
+	define('DB_USER', 'root');
+	/** MySQL database password */
+	define('DB_PASSWORD', 'root');
+} 
 
-/** MySQL database password */
-define('DB_PASSWORD', 'root');
+else { // Heroku settings
+	/** The name of the database for WordPress */
+	define('DB_NAME', 'heroku_30d0092d4dadf27');
+	/** MySQL database username */
+	define('DB_USER', 'b0238d81f7ca64');
+	/** MySQL database password */
+	define('DB_PASSWORD', '13562ee5');
+}
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
